@@ -299,7 +299,7 @@ static const NSInteger kLanguageLength = 9;
 		return s;
 	}
 
-	if (!self.link) {
+	if (!self.link || self.link.length <= @"http".length) {
         NSURL *feedURL = [NSURL URLWithString:self.urlString];
         if (!feedURL) {
             return s;
